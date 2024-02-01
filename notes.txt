@@ -2,3 +2,5 @@
 C. Newman&#13;&#
 <<<date>>>&#13;&#10;
 <<<description>>>&#13;&#10;
+
+How to write custom transpiler: https://tomassetti.me/how-to-write-a-transpiler/
