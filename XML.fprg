@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="S3786286"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-01-31 09:42:33 PM"/>
+        <attribute name="created" value="UzM3ODYyODY7VkRJLUFDQUQxMC0wMDY7MjAyNC0wMS0zMTswNzoxMjo0MCBQTTsyNTU5"/>
+        <attribute name="edited" value="UzM3ODYyODY7VkRJLUFDQUQxMC0wMDY7MjAyNC0wMS0zMTswOTo0MjozMyBQTTszOzI2NzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Gofer Groceries Order Program&#13;&#10;C. Newman&#13;&#10;01/31/24&#13;&#10;Welcomes user, obtains order, calculates cost&#13;&#10;"/>
+            <declare name="TODAYSSPECIAL" type="String" array="False" size=""/>
+            <assign variable="TODAYSSPECIAL" expression="&quot;16oz bad of chips&quot;"/>
+            <declare name="ITEMCOST" type="Real" array="False" size=""/>
+            <assign variable="ITEMCOST" expression="3.25"/>
+            <declare name="DELIVERYFEE" type="Real" array="False" size=""/>
+            <assign variable="DELIVERYFEE" expression="3.0"/>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="orderQty" type="Integer" array="False" size=""/>
+            <assign variable="orderQty" expression="0"/>
+            <call expression="welcomeUser()"/>
+            <output expression="&quot;Please enter your name: &quot;" newline="True"/>
+            <input variable="name"/>
+            <call expression="showDailyOffer(TODAYSSPECIAL, ITEMCOST)"/>
+            <output expression="&quot;Please enter the number of items for your order: &quot;" newline="True"/>
+            <input variable="orderQty"/>
+            <call expression="confirmOrderQuantity(orderQty)"/>
+            <call expression="showDeliveryFee(DELIVERYFEE)"/>
+            <call expression="calcAndDisplayTotalCost(ITEMCOST, orderQty, DELIVERYFEE)"/>
+            <call expression="displayThankYouMessage(name)"/>
+        </body>
+    </function>
+    <function name="calcAndDisplayTotalCost" type="None" variable="">
+        <parameters>
+            <parameter name="itemCost" type="Real" array="False"/>
+            <parameter name="orderQty" type="Integer" array="False"/>
+            <parameter name="deliveryFee" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="totalCost" type="Real" array="False" size=""/>
+            <assign variable="totalCost" expression="(itemCost * orderQty) + deliveryFee"/>
+            <output expression="&quot;Your total cost is $&quot; &amp; totalCost" newline="True"/>
+        </body>
+    </function>
+    <function name="confirmOrderQuantity" type="None" variable="">
+        <parameters>
+            <parameter name="orderQuantity" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;You selected &quot; &amp; orderQuantity &amp; &quot; items for delivery.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="displayThankYouMessage" type="None" variable="">
+        <parameters>
+            <parameter name="name" type="String" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;Thank you for your order, &quot; &amp; name" newline="True"/>
+        </body>
+    </function>
+    <function name="showDailyOffer" type="None" variable="">
+        <parameters>
+            <parameter name="todaysSpecial" type="String" array="False"/>
+            <parameter name="itemCost" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;Our special today is:&quot;" newline="True"/>
+            <output expression="todaysSpecial &amp; &quot; for $&quot; &amp; itemCost" newline="True"/>
+        </body>
+    </function>
+    <function name="showDeliveryFee" type="None" variable="">
+        <parameters>
+            <parameter name="deliveryFee" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;A delivery fee of $&quot; &amp; deliveryFee &amp; &quot; will be added to your order.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="welcomeUser" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Welcome to Gofer Groceries!&quot;" newline="True"/>
+            <output expression="&quot;We sell and deliver all your grocery needs.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

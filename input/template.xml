@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="S3786286"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value=""/>
+        <attribute name="created" value="UzM3ODYyODY7VkRJLUFDQUQxMC0wMDY7MjAyNC0wMS0zMTswNzoxMjo0MCBQTTsyNTU5"/>
+        <attribute name="edited" value="UzM3ODYyODY7VkRJLUFDQUQxMC0wMDY7MjAyNC0wMS0zMTswOTo0MjozMyBQTTszOzI2NzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Gofer Groceries Order Program&#13;&#10;C. Newman&#13;&#10;01/31/24&#13;&#10;Welcomes user, obtains order, calculates cost&#13;&#10;"/>
+        </body>
+    </function>
+</flowgorithm>
